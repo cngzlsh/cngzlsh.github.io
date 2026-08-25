@@ -1,81 +1,636 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-body {
-  font-family:palatino, serif;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sihao (Daniel) Liu | Computational Neuroscience & Machine Learning</title>
+  <meta name="description" content="Personal website of Sihao (Daniel) Liu — PhD Researcher in Computational Neuroscience at UCL and Machine Learning Engineer at PhyT." />
+  <meta name="author" content="Sihao (Daniel) Liu" />
+
+  <!-- Google Fonts for clean & professional typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<p style="font-size:22px">Welcome to <b>Sihao Liu (Daniel)</b> 's home page.</p>
 
-<section style="font-size:18px">
-<h2 >About</h2>
-<p> I am currently a pre-doctoral research assistant at <a href="https://www.ucl.ac.uk/">University College London</a> (UCL), gratefully funded and supervised by <a href="https://www.ucl.ac.uk/biosciences/people/caswell-barry">Prof Caswell Barry<a/>. I work closely with people in UCL <a href="https://www.ucl.ac.uk/biosciences/cell-and-developmental-biology">Cell and Developmental Biology</a>, <a href="https://www.ucl.ac.uk/ai-centre/ucl-centre-artificial-intelligence">Centre for Artificial Intelligence</a>, and the <a href="https://www.sainsburywellcome.org/web/">Sainsbury Wellcome Centre</a>.</p>
-<p> In the past, I obtained my Bachelor of Science in <a href="https://www.ucl.ac.uk/natural-sciences/">Natural Sciences</a> (major in Neuroscience, minor in Mathematics and Statistics), and subsequently remained a UCL alumni scholar for the Master of Science in <a href="https://www.ucl.ac.uk/ai-centre/study">Machine Learning</a>, where I worked with Caswell for my <a href="https://drive.google.com/file/d/1KHlh_DnoRQztX4pc7-TVpLvDo2NMAxMP/view?usp=sharing">masters' project</a>.</p>
-</section>
+  <!-- Sticky Navigation Bar -->
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">
+        Sihao (Daniel) Liu
+        <span class="nav-brand-sub">/ UCL &amp; PhyT</span>
+      </a>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#research">Publications</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#resources">Resources</a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+          <svg id="sun-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
 
-<section style="font-size:18px">
-<h2 >Interests</h2>
-<p> Theoretical neuroscience studies the nervous system employing methods and theories from neurobiology, applied mathematics, machine learning, information theory and signal processing, statistical mechanics, and many more. Below is a brief summary of my interests: </p>
-<ul>
-  <li>Probabilistic (or Bayesian) computations in the brain: receptive field models, population codes, neural representation of uncertainty, predictive coding, etc..</li>
-  <li>The associated approximate Bayesian inference schemes, mostly recognition models, inspired by or inspiring the above mechanisms.</li>
-  <li>Machine learning applied to neural data modelling: supervised (deep) learning of neural circuits, dimensionality reduction (PCA, GPFA, etc.).</li>
-  <li>Spatial learning, navigation and relational memory: how place cells, grid cells, etc. work together for much of the EC/HPC functions.</li>
-</ul>
-</section>
+  <main class="container">
+    <!-- Hero / Profile Card -->
+    <header class="hero-header" id="about">
+      <h1 class="hero-title">Sihao (Daniel) Liu</h1>
+      <div class="hero-subtitle">
+        <span>PhD Researcher in Computational Neuroscience</span>
+        <span style="color: var(--text-light); font-weight: 300;">•</span>
+        <span>Machine Learning Engineer</span>
+      </div>
+      <p class="hero-desc">
+        I am a PhD researcher at <b>University College London (UCL)</b> advised by <a href="https://www.ucl.ac.uk/biosciences/people/caswell-barry" target="_blank" rel="noopener">Prof. Caswell Barry</a> in the <a href="https://barry-lab.com/" target="_blank" rel="noopener">Barry Lab</a>, and a Machine Learning Engineer at <b>PhyT</b> building AI solutions for healthcare. My work spans recurrent multimodal neural networks, VR behavioral environments, approximate Bayesian inference, and robust production machine learning.
+      </p>
+      
+      <!-- Contact and External Links -->
+      <div class="contact-badges">
+        <a href="mailto:cngzlsh@hotmail.com" class="btn-badge" title="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span>cngzlsh@hotmail.com</span>
+        </a>
+        <a href="https://github.com/cngzlsh" target="_blank" rel="noopener" class="btn-badge" title="GitHub">
+          <svg fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <a href="https://linkedin.com/in/sihao-liu-11748048" target="_blank" rel="noopener" class="btn-badge" title="LinkedIn">
+          <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://arxiv.org/abs/2211.12935" target="_blank" rel="noopener" class="btn-badge" title="arXiv Author Profile">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+          <span>arXiv</span>
+        </a>
+        <span class="btn-badge" style="cursor: default;">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <span>London, UK</span>
+        </span>
+      </div>
+    </header>
 
-<section style="font-size:18px">
-<h2 >Teaching</h2>
-<p> I am teaching assistant for <a href="https://www.ucl.ac.uk/module-catalogue/modules/approximate-inference-and-learning-in-probabilistic-models-COMP0085"> COMP0085 Approximate Inference and Learning in Probabilistic Models</a> (2022-23), run jointly by the Gatsby Unit and CS and led by <a href="https://www.gatsby.ucl.ac.uk/~maneesh/">Maneesh Sahani</a>. This course presents a wide range of approximate inference schemes (Laplace, variational Bayes, mean-field, expectation propagation, loopy belief propagation, amortised recognition models) in (non-) conjugate exponential family latent variable models, in addition to some exact inference (tree-based message passing and junction tree) and supervised learning (Gaussian process regression) algorithms. </p>
-</section>
-  
-<section style="font-size:18px">
-<h2 >Preprints and Publications</h2>
-<p> Functional Connectome: Approximating Brain Networks with Artificial Neural Networks. (<a href="https://arxiv.org/abs/2211.12935">arXiv</a>) Submitted to Cosyne 2023.</p>
-</section>
-  
-<section style="font-size:18px">
-<h2 >Resources</h2>
-<p> A (non-exhaustive) collection of my mixed typeset/handwritten lecture notes at UCL. (please contact me directly should there be copyright infringements; strictly no commercial use.)</p>
-<ul>
-  <li>STAT0008 Statistical Inference [<a href="https://www.ucl.ac.uk/module-catalogue/modules/statistical-inference-STAT0008">description</a>] [<a href="https://drive.google.com/file/d/1QoNP-45GMPm8jvxu3HWzc1Ygo9PdSs2x/view?usp=sharing">pdf</a>]</li>
-  <li>STAT0009 Stochastic Systems [<a href="https://www.ucl.ac.uk/module-catalogue/modules/stochastic-systems-STAT0009">description</a>] [<a href="https://drive.google.com/file/d/1ZS2z2n0-exI8p40jp5Dz4HW1HA-A7iT2/view?usp=sharing">pdf</a>]</li>
-  <li>STAT0010 Forecasting [<a href="https://www.ucl.ac.uk/module-catalogue/modules/forecasting-STAT0010">description</a>] [<a href="https://drive.google.com/file/d/1ENV13kp00tHusCwcAtAer7MivFiZwTpl/view?usp=sharing">pdf</a>]</li>
-  <li>STAT0031 Applied Bayesian Methods [<a href="https://www.ucl.ac.uk/module-catalogue/modules/applied-bayesian-methods-STAT0031">description</a>] [<a href="https://drive.google.com/file/d/1bH9wEsB3ni6zJI8K-rsKMNYnaRFOg_LS/view?usp=sharing">pdf</a>]</li>
-  <li>ANAT0003 Human Neuroanatomy [<a href="https://www.ucl.ac.uk/module-catalogue/modules/human-neuroanatomy-ANAT0003">description</a>] [<a href="https://drive.google.com/file/d/1YqBnn1YmYNPW2VosMClajnkRbmkfPI2_/view?usp=sharing">pdf</a>]</li>
-  <li>PHOL0005 Structure and Function of Nervous Systems [<a href="https://www.ucl.ac.uk/module-catalogue/modules/structure-and-function-of-nervous-systems-PHOL0005">description</a>] [<a href="https://drive.google.com/file/d/1S1M1Aj7QaGe8R6XZCOzZld1WPgd5lpWN/view?usp=sharing">pdf</a>]</li>
-  <li>NEUR0014 Neural Basis of Motivation and Learning [<a href="https://www.ucl.ac.uk/module-catalogue/modules/neural-basis-of-motivation-and-learning-NEUR0014">description</a>][work in progress]</li>
-  <li>NEUR0020 Integrative Systems Neuroscience [<a href="https://www.ucl.ac.uk/module-catalogue/modules/integrative-systems-neuroscience-NEUR0020">description</a>] [<a href="https://drive.google.com/file/d/1m4zCcY-8Y5pV-QzAu3wJX0wq2dNJQgRP/view?usp=sharing">pdf</a>]</li>
-  <li>COMP0078 Supervised Learning [<a href="https://www.ucl.ac.uk/module-catalogue/modules/supervised-learning-COMP0078">description</a>] [<a href="https://drive.google.com/file/d/1WJ9LTPfpp0-OuqikpT74sc98IhY3spog/view?usp=sharing">pdf</a>]</li>
-  <li>COMP0086 Probabilistic and Unsupervised Learning [<a href="https://www.ucl.ac.uk/module-catalogue/modules/probabilistic-and-unsupervised-learning-COMP0086">description</a>] & COMP0085 Approximate Inference [<a href="https://www.ucl.ac.uk/module-catalogue/modules/approximate-inference-and-learning-in-probabilistic-models-COMP0085">description</a>] [<a href="http://www.gatsby.ucl.ac.uk/teaching/courses/ml1/">course page</a>] [<a href="https://drive.google.com/file/d/1zqMrW3WyDpxDHGp1bVPYYIxpyhV1JW7U/view?usp=sharing">pdf</a>]</li>
-  <li>COMP0089 Reinforcement Learning [<a href="https://www.ucl.ac.uk/module-catalogue/modules/reinforcement-learning-COMP0089">description</a>] [<a href="https://www.deepmind.com/learning-resources/reinforcement-learning-lecture-series-2021">slides from deepmind</a>] [<a href="https://drive.google.com/file/d/1BA6rbgsP91b-YJ4HzocA4Wrpn4eeJAoz/view?usp=sharing">pdf</a>]</li>
-</ul>
-<p>Two paper presentations I recently gave at seminar/journal clubs.</p>
-<ul>
-  <li>Near-Optimal Sensor Placements in Gaussian Processes (Krause) [<a href="https://drive.google.com/file/d/1VVwofc71wmwTT9GVN5CUfrRHpWt7txo2/view?usp=sharing">pdf</a>] (cr. Beston)</li>
-  <li>Predictive coding, Variational Autoencoders and Biological Connections (Marino) [<a href="https://drive.google.com/file/d/1tSUg5dvB9wKCpk91IsXc_b0ZrCkjxGaZ/view?usp=sharing">pdf</a>]</li>
-</ul>
-<p>Occasionally I write blogs on Computational Neuroscience and Bayesian Machine Learning.</p>
-  <ul>
-  <li>A Friendly(-ish?) Introduction to Neural Representations of Uncertainty [<a href="https://medium.com/@cngzlsh/a-friendly-ish-introduction-to-neural-representations-of-uncertainty-2a6157b5cea0">link</a>]</li>
-</ul>
-</section>
-  
-<section style="font-size:18px">
-<h2 >Trivia</h2>
-<p> I was born in Canton (Guangzhou), China and spent much of my recent years in Bedfordshire, England. I speak English, Cantonese, Mandarin as well as some German and Spanish. I am an <a href="http://www.bedfordschool.org.uk/association/ob-club/">Old Bedfordian</a>. In my free time, I advocate for clean energy, sustainable development, vegetarianism/veganism, and ecological and environmental conservation.</p>
-</section>
- 
-  
-<section style="font-size:18px">
-<h2 >Contact</h2>
-<p>Email: [firstname].[lastname].18[at]ucl.ac.uk</p>
-<p>Lab address: <a href="https://barry-lab.com/contact-us/">Barry Lab </a></p>
-</section>
-  
-<p>Last updated: 27/11/22</p>
+    <!-- Experience Section -->
+    <section id="experience">
+      <div class="section-header">
+        <span class="section-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+
+      <div class="card-list">
+        <!-- PhyT -->
+        <article class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Machine Learning Engineer</h3>
+              <div class="card-subtitle">PhyT &bull; AI for Healthcare Startup</div>
+            </div>
+            <span class="card-meta">Oct 2025 – Present</span>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>Built and shipped the core PyTorch model behind the product: a multi-output regression network predicting 29 targets from computer-vision-derived body measurements, trained on 70K+ clinical records.</li>
+              <li>Implemented an ensemble-based validation layer in the production inference pipeline, testing multi-model prediction residuals against reference statistics to detect and route out-of-distribution inputs before downstream failure.</li>
+              <li>Designed a KDE outlier detector over reference data that identifies which individual input feature is implausible and falls back to a reduced-feature model, degrading gracefully rather than failing.</li>
+              <li>Ported the statistical model from Python research code to TypeScript for inline inference in the application backend, verified to numerical parity with the reference implementation under test.</li>
+              <li>Devised an end-to-end model-monitoring dashboard in Python, with SQLite for lightweight metric storage hosted on AWS to provide real-time statistical flagging, audit trails, and dataset drift tracking.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Teaching Assistant -->
+        <article class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Postgraduate Teaching Assistant</h3>
+              <div class="card-subtitle">UCL Computer Science</div>
+            </div>
+            <span class="card-meta">2022 – Present</span>
+          </div>
+          <div class="card-body">
+            <p>Teaching assistant across four years for three core postgraduate machine learning modules:</p>
+            <ul>
+              <li><b>COMP0086: Probabilistic and Unsupervised Learning</b> &amp; <b>COMP0085: Approximate Inference</b> (Led by Prof. Maneesh Sahani &amp; Gatsby Computational Neuroscience Unit)</li>
+              <li><b>COMP0089: Reinforcement Learning</b> (DeepMind / UCL partnership curriculum)</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Research Assistant -->
+        <article class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Research Assistant</h3>
+              <div class="card-subtitle">University College London</div>
+            </div>
+            <span class="card-meta">2022 – 2023</span>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>Ran large-scale spiking neural network simulations in <code>NEURON</code> and <code>Brian2</code>, building biophysically detailed multi-compartment models and scaling them to multi-neuron populations.</li>
+              <li>Trained attention-based models on neural recording data.</li>
+              <li>Ran the lab’s ML and computational neuroscience journal club and maintained the group website.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <div class="section-header">
+        <span class="section-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+          </svg>
+        </span>
+        <h2 class="section-title">Education</h2>
+      </div>
+
+      <div class="card-list">
+        <!-- PhD -->
+        <article class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">PhD in Computational Neuroscience</h3>
+              <div class="card-subtitle">University College London (UCL)</div>
+            </div>
+            <span class="card-meta">2023 – Present</span>
+          </div>
+          <div class="card-body">
+            <p><b>Thesis / Research Topic:</b> <i>Disentangling Sensory Drivers of Spatial Codes with Recurrent Audiovisual Models</i></p>
+            <p><b>Advisor:</b> <a href="https://www.ucl.ac.uk/biosciences/people/caswell-barry" target="_blank" rel="noopener">Prof. Caswell Barry</a></p>
+            <ul>
+              <li>Built the experimental platform end to end: a Unity VR environment with spatially rendered audio and a scripted agent that navigates predefined trajectories, generating synchronised audiovisual streams as model input.</li>
+              <li>Trained multimodal audiovisual models on the resulting data to separate the sensory contributions driving spatial representations.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- MSc -->
+        <article class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">MSc in Machine Learning</h3>
+              <div class="card-subtitle">University College London (UCL)</div>
+            </div>
+            <span class="card-meta">2021 – 2022</span>
+          </div>
+          <div class="card-body">
+            <p><b>Distinction (Top 5% of cohort)</b> &bull; UCL Alumni Scholar</p>
+            <p><i>Selected modules:</i> Approximate Inference, Reinforcement Learning, Statistical NLP, Supervised Learning.</p>
+            <div style="margin-top: 0.5rem;">
+              <a href="https://drive.google.com/file/d/1KHlh_DnoRQztX4pc7-TVpLvDo2NMAxMP/view?usp=sharing" target="_blank" rel="noopener" class="link-badge">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                View Master's Thesis
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- BSc -->
+        <article class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">BSc in Statistics and Neuroscience</h3>
+              <div class="card-subtitle">University College London (UCL)</div>
+            </div>
+            <span class="card-meta">2018 – 2021</span>
+          </div>
+          <div class="card-body">
+            <p>Natural Sciences programme: Major in Neuroscience, minor in Mathematics and Statistics.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Publications & Presentations Section -->
+    <section id="research">
+      <div class="section-header">
+        <span class="section-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+          </svg>
+        </span>
+        <h2 class="section-title">Publications &amp; Presentations</h2>
+      </div>
+
+      <!-- Preprint -->
+      <div class="pub-item">
+        <div class="pub-header">
+          <span class="type-pill">Preprint</span>
+          <span class="card-meta">2022</span>
+        </div>
+        <h3 class="pub-title">Functional Connectome: Approximating Brain Networks with Artificial Neural Networks</h3>
+        <div class="pub-authors"><b>Liu, S.</b>, Mavor-Parker, A. N., &amp; Barry, C.</div>
+        <div class="pub-venue">arXiv:2211.12935</div>
+        <p class="pub-desc">Showed MLPs and LSTMs learn the input–output mapping of simulated hippocampal circuits data-efficiently and generalise zero-shot to unseen environments.</p>
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2211.12935" target="_blank" rel="noopener" class="link-badge">arXiv Paper</a>
+          <a href="https://arxiv.org/pdf/2211.12935.pdf" target="_blank" rel="noopener" class="link-badge">PDF</a>
+        </div>
+      </div>
+
+      <!-- Poster -->
+      <div class="pub-item">
+        <div class="pub-header">
+          <span class="type-pill">Poster (First Author)</span>
+          <span class="card-meta">Halifax &bull; July 2026</span>
+        </div>
+        <h3 class="pub-title">Disentangling Sensory Drivers of Spatial Codes with Recurrent Audiovisual Models in VR</h3>
+        <div class="pub-venue">35th Annual Computational Neuroscience Meeting (CNS*2026)</div>
+      </div>
+
+      <!-- Workshop -->
+      <div class="pub-item">
+        <div class="pub-header">
+          <span class="type-pill">Tutorial Workshop</span>
+          <span class="card-meta">Florence &bull; July 2025</span>
+        </div>
+        <h3 class="pub-title">Modelling Hippocampal Neurons of Animals Navigating in VR with Recurrent Neural Networks</h3>
+        <div class="pub-venue">34th Annual Computational Neuroscience Meeting (CNS*2025)</div>
+      </div>
+
+      <!-- Talk -->
+      <div class="pub-item">
+        <div class="pub-header">
+          <span class="type-pill">Invited Talk</span>
+          <span class="card-meta">Tuscany &bull; Sep 2024</span>
+        </div>
+        <h3 class="pub-title">Approximating Neural Circuit Computation with Attention-Based Deep Learning Models</h3>
+        <div class="pub-venue">4th International Advanced Course and Symposium on Artificial Intelligence &amp; Neuroscience</div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills">
+      <div class="section-header">
+        <span class="section-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+        </span>
+        <h2 class="section-title">Technical Skills</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-card-title">Languages</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">HTML/CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-title">ML &amp; Deep Learning</div>
+          <div class="skill-tags">
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">pandas</span>
+            <span class="skill-tag">scikit-learn</span>
+            <span class="skill-tag">Transformers</span>
+            <span class="skill-tag">RNNs / LSTMs</span>
+            <span class="skill-tag">Regression Modelling</span>
+            <span class="skill-tag">Model Calibration</span>
+            <span class="skill-tag">KDE</span>
+            <span class="skill-tag">Outlier Detection</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-title">Computer Vision</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Pose Estimation (MediaPipe)</span>
+            <span class="skill-tag">Semantic Segmentation</span>
+            <span class="skill-tag">Image Measurement Extraction</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-title">Scientific Computing</div>
+          <div class="skill-tags">
+            <span class="skill-tag">NEURON</span>
+            <span class="skill-tag">Brian2</span>
+            <span class="skill-tag">Spiking Neural Networks</span>
+            <span class="skill-tag">Unity VR</span>
+          </div>
+        </div>
+
+        <div class="skill-card" style="grid-column: 1 / -1;">
+          <div class="skill-card-title">Tools &amp; Cloud Infrastructure</div>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS (Lambda, S3)</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">SQLite</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub Actions CI</span>
+            <span class="skill-tag">Weights &amp; Biases (W&amp;B)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards">
+      <div class="section-header">
+        <span class="section-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+          </svg>
+        </span>
+        <h2 class="section-title">Awards &amp; Honors</h2>
+      </div>
+
+      <div class="award-card">
+        <div class="award-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="award-text">
+          <b>Fully funded PhD Studentship</b> &bull; UKRI BBSRC LIDo Doctoral Training Partnership
+        </div>
+      </div>
+
+      <div class="award-card">
+        <div class="award-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="award-text">
+          <b>UCL International Scholar Award</b> for Doctoral Training Centres (ISAD)
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources & Lecture Notes Section -->
+    <section id="resources">
+      <div class="section-header">
+        <span class="section-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+        </span>
+        <h2 class="section-title">Resources &amp; UCL Notes</h2>
+      </div>
+
+      <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem;">
+        A curated archive of my lecture notes, seminar presentations, and blog articles from my studies and teaching at UCL.
+      </p>
+
+      <div class="resources-grid">
+        <a href="https://drive.google.com/file/d/1zqMrW3WyDpxDHGp1bVPYYIxpyhV1JW7U/view?usp=sharing" target="_blank" rel="noopener" class="resource-item">
+          <div class="resource-info">
+            <span class="resource-code">COMP0086 / COMP0085</span>
+            <span class="resource-name">Probabilistic &amp; Approximate Inference</span>
+          </div>
+          <span class="resource-action">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1BA6rbgsP91b-YJ4HzocA4Wrpn4eeJAoz/view?usp=sharing" target="_blank" rel="noopener" class="resource-item">
+          <div class="resource-info">
+            <span class="resource-code">COMP0089</span>
+            <span class="resource-name">Reinforcement Learning</span>
+          </div>
+          <span class="resource-action">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1WJ9LTPfpp0-OuqikpT74sc98IhY3spog/view?usp=sharing" target="_blank" rel="noopener" class="resource-item">
+          <div class="resource-info">
+            <span class="resource-code">COMP0078</span>
+            <span class="resource-name">Supervised Learning</span>
+          </div>
+          <span class="resource-action">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1bH9wEsB3ni6zJI8K-rsKMNYnaRFOg_LS/view?usp=sharing" target="_blank" rel="noopener" class="resource-item">
+          <div class="resource-info">
+            <span class="resource-code">STAT0031</span>
+            <span class="resource-name">Applied Bayesian Methods</span>
+          </div>
+          <span class="resource-action">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1QoNP-45GMPm8jvxu3HWzc1Ygo9PdSs2x/view?usp=sharing" target="_blank" rel="noopener" class="resource-item">
+          <div class="resource-info">
+            <span class="resource-code">STAT0008</span>
+            <span class="resource-name">Statistical Inference</span>
+          </div>
+          <span class="resource-action">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1ZS2z2n0-exI8p40jp5Dz4HW1HA-A7iT2/view?usp=sharing" target="_blank" rel="noopener" class="resource-item">
+          <div class="resource-info">
+            <span class="resource-code">STAT0009</span>
+            <span class="resource-name">Stochastic Systems</span>
+          </div>
+          <span class="resource-action">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1ENV13kp00tHusCwcAtAer7MivFiZwTpl/view?usp=sharing" target="_blank" rel="noopener" class="resource-item">
+          <div class="resource-info">
+            <span class="resource-code">STAT0010</span>
+            <span class="resource-name">Forecasting</span>
+          </div>
+          <span class="resource-action">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1m4zCcY-8Y5pV-QzAu3wJX0wq2dNJQgRP/view?usp=sharing" target="_blank" rel="noopener" class="resource-item">
+          <div class="resource-info">
+            <span class="resource-code">NEUR0020</span>
+            <span class="resource-name">Integrative Systems Neuroscience</span>
+          </div>
+          <span class="resource-action">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1YqBnn1YmYNPW2VosMClajnkRbmkfPI2_/view?usp=sharing" target="_blank" rel="noopener" class="resource-item">
+          <div class="resource-info">
+            <span class="resource-code">ANAT0003</span>
+            <span class="resource-name">Human Neuroanatomy</span>
+          </div>
+          <span class="resource-action">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1S1M1Aj7QaGe8R6XZCOzZld1WPgd5lpWN/view?usp=sharing" target="_blank" rel="noopener" class="resource-item">
+          <div class="resource-info">
+            <span class="resource-code">PHOL0005</span>
+            <span class="resource-name">Structure &amp; Function of Nervous Systems</span>
+          </div>
+          <span class="resource-action">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <!-- Seminar Talks & Blog -->
+      <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <div class="card" style="padding: 1rem 1.25rem;">
+          <div style="font-weight: 600; font-size: 0.95rem; margin-bottom: 0.4rem; color: var(--text-main);">Seminar &amp; Journal Club Presentations</div>
+          <ul style="padding-left: 1.25rem; font-size: 0.9rem; color: var(--text-muted);">
+            <li>
+              Near-Optimal Sensor Placements in Gaussian Processes (Krause) 
+              [<a href="https://drive.google.com/file/d/1VVwofc71wmwTT9GVN5CUfrRHpWt7txo2/view?usp=sharing" target="_blank" rel="noopener">Slides PDF</a>]
+            </li>
+            <li>
+              Predictive Coding, Variational Autoencoders and Biological Connections (Marino) 
+              [<a href="https://drive.google.com/file/d/1tSUg5dvB9wKCpk91IsXc_b0ZrCkjxGaZ/view?usp=sharing" target="_blank" rel="noopener">Slides PDF</a>]
+            </li>
+          </ul>
+        </div>
+
+        <div class="card" style="padding: 1rem 1.25rem;">
+          <div style="font-weight: 600; font-size: 0.95rem; margin-bottom: 0.4rem; color: var(--text-main);">Writing &amp; Blog</div>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">
+            &bull; <a href="https://medium.com/@cngzlsh/a-friendly-ish-introduction-to-neural-representations-of-uncertainty-2a6157b5cea0" target="_blank" rel="noopener"><b>A Friendly(-ish?) Introduction to Neural Representations of Uncertainty</b></a> on Medium.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trivia & About Bio -->
+    <section id="trivia">
+      <div class="section-header">
+        <span class="section-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </span>
+        <h2 class="section-title">Personal &amp; Background</h2>
+      </div>
+      <div class="card">
+        <p class="card-body">
+          I was born in Canton (Guangzhou), China and spent much of my youth in Bedfordshire, England as an <a href="http://www.bedfordschool.org.uk/association/ob-club/" target="_blank" rel="noopener">Old Bedfordian</a>. I speak English, Cantonese, and Mandarin, along with conversational German and Spanish. In my free time, I am passionate about sustainable development, clean energy, veganism, and environmental conservation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div>&copy; <span id="current-year">2026</span> Sihao (Daniel) Liu. All rights reserved.</div>
+      <div>Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></div>
+    </footer>
+  </main>
+
+  <script>
+    // Theme toggle logic with system preference detection and localStorage persistence
+    const toggleBtn = document.getElementById('theme-toggle');
+    const sunIcon = document.getElementById('sun-icon');
+    const moonIcon = document.getElementById('moon-icon');
+    
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'dark') {
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
+      } else {
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
+      }
+    }
+
+    // Determine initial theme
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme) {
+      applyTheme(savedTheme);
+    } else if (prefersDark) {
+      applyTheme('dark');
+    } else {
+      applyTheme('light');
+    }
+
+    // Toggle on button click
+    toggleBtn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', newTheme);
+      applyTheme(newTheme);
+    });
+
+    // Listen for system theme changes if user has no explicit preference saved
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      if (!localStorage.getItem('theme')) {
+        applyTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+
+    // Update copyright year dynamically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
